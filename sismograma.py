@@ -72,3 +72,9 @@ plt.show()
 
 print("Pendiente1 =",m1)
 print("Pendiente2 =",m2)
+
+v1 = 1/abs(m1)
+v2 = 1/abs(m2)
+
+print(v1)
+print(v2)
