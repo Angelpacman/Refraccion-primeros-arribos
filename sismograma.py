@@ -57,24 +57,34 @@ m2, b2 = calculo_de_pendiente2(xs2,ys2)
 regresion_linear2 = [(m2*x)+b2 for x in xs2]
 
 
-print(datos)
-plt.title("Primeros arrivos del sismograma")
-plt.xlim(5,25)
-plt.ylim(6,18)
-plt.grid(True, which = 'both')
-plt.xlabel("Distancia (x)")
+print("\n",datos)
+print("Pendiente1 =",m1)
+print("Pendiente2 =",m2)
 
-plt.ylabel("Tiempo f(x)")
+v1 = 1000*1/abs(m1)
+v2 = 1000*1/abs(m2)
+
+print("Velocidad 1 =",v1, 'metros/segundo')
+print("Velocidad 2 =",v2, 'metros/segundo')
+
+plt.title("Primeros arrivos del sismograma")
+plt.xlim(0,25)
+plt.ylim(0,25)
+plt.grid(True, which = 'both')
+plt.xlabel("Distancia (x) metros")
+plt.ylabel("Tiempo f(x) milisegundos")
+plt.scatter(tiempo,distancia)
+plt.show()
+
+
+plt.title("Primeros arrivos del sismograma")
+plt.xlim(0,25)
+plt.ylim(0,25)
+plt.grid(True, which = 'both')
+plt.xlabel("Distancia (x) metros")
+
+plt.ylabel("Tiempo f(x) milisegundos")
 plt.scatter(tiempo,distancia)
 plt.plot(xs1, regresion_linear1)
 plt.plot(xs2, regresion_linear2)
 plt.show()
-
-print("Pendiente1 =",m1)
-print("Pendiente2 =",m2)
-
-v1 = 1/abs(m1)
-v2 = 1/abs(m2)
-
-print(v1)
-print(v2)
